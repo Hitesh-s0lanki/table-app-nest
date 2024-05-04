@@ -1,6 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Category } from './category/entities/category.entity';
 import { Subcategory } from './subcategory/entities/subcategory.entity';
@@ -21,7 +19,7 @@ import { ConfigModule } from '@nestjs/config';
     synchronize: true,
     ssl: true
   }), CategoryModule, SubcategoryModule, ProductModule],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule { }

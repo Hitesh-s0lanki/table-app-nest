@@ -15,6 +15,6 @@ export class Category {
     @Column({ default: new Date() })
     createdAt: Date
 
-    @OneToMany(() => Subcategory, (subcategory) => subcategory.category, { onDelete: "CASCADE" })
+    @OneToMany(() => Subcategory, (subcategory) => subcategory.category)
     subcategories: Subcategory[]
 }

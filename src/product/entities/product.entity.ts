@@ -12,6 +12,6 @@ export class Product {
     @Column({ type: "decimal" })
     price: number;
 
-    @ManyToOne(() => Subcategory, (subcategory) => subcategory.products)
+    @ManyToOne(() => Subcategory, (subcategory) => subcategory.products, { onDelete: 'CASCADE' })
     subcategory: Subcategory
 }
